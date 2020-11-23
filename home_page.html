@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wrike</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navbar {
+            height: 68px;
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        #navbar > :nth-child(n) {
+            float: left;
+            
+        }
+        #navbar > a > img {
+            width: 120px;
+            margin-top: -30px;
+            margin-left: 20px;
+        }
+        ul {
+            margin-left: 20px;
+            list-style: none;
+        }
+        ul li {
+            display: inline-block;
+            position: relative;
+            line-height: 34px;
+            text-align: left;
+            font-size: 16px;
+            margin-top: -10px;
+            margin-left: -40px;
+        }
+        ul li a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown li:nth-child(1) {
+            padding-top: 30px;
+        }
+        ul li a:hover {
+            color: rgb(40, 141, 121);
+        }
+        .dropdown {
+            width: 180px;
+            display: none;
+            position: absolute;
+            margin-left: -10px;
+            background-color: rgb(252, 252, 252);
+        }
+        ul li:hover ul.dropdown{ 
+            display: block;
+        }
+        .solution-menu {
+            margin-left: -60px;
+        }
+        .grey-heading > a {
+            color: rgb(143, 143, 143);
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+        .grey-heading > a:hover {
+            color: rgb(143, 143, 143);
+            cursor: auto;       
+        }
+        .all-teams > a {
+            color: rgb(34, 121, 103);
+        }
+        .all-teams > a:hover {
+            color: rgb(29, 175, 146);
+            font-size: 17px;
+        }
+        .solution-first-part {
+            float: left;
+            width: 200px;
+        }
+        .solution-second-part {
+            float: right;
+        }
+        .price {
+            margin-left: -130px;
+        }
+        .resource-menu > a{
+            margin-left: -40px;
+        }
+        .resource-first-part {
+            width: 200px;
+        }
+        .resource-third-part {
+            float: right;
+        }
+        .login > a{
+            margin-left: -120px;
+            color: rgb(38, 140, 120);
+        }
+        .login > a:hover {
+            color:  rgb(7, 206, 67);
+        }
+        .start-for-free {
+            float: right;
+            margin-left: 1100px;
+            margin-top: -98px;
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: white;
+            background-color: rgb(7, 206, 67);
+            border: none;
+            font-weight: bold;
+        }
+        .start-for-free:hover {
+            background-color: rgb(4, 186, 113);
+            cursor: pointer;
+            transition-delay: 0.1s;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="C:\Users\suhai\Desktop\masai assignments\unit-1 evaluation\home_page.html"><img src="https://www.wrike.com/content/themes/wrike/dist/img/raster/wrike-logo.png"/></a>
+        <ul>
+            <li><a href="#">Products &#9662</a>
+                <ul class="dropdown">
+                    <li><a href="#">Product Tour</a></li>
+                    <li><a href="#">Project Templates</a></li>
+                    <li><a href="#">Apps & Integration</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li class="solution-menu"><a href="#">Solutions &#9662</a>
+                <div class="solution-first-part">
+                    <ul class="dropdown">
+                        <li class="grey-heading"><a href="#">TEAMS</a></li><br>
+                        <li><a href="#">Project Managers</a></li>
+                        <li><a href="#">Marketing</a></li><br>
+                        <li><a href="#">Creative</a></li>
+                        <li><a href="#">Professional Services</a></li>
+                        <li><a href="#">Product Development</a></li>
+                        <li><a href="#">Company-Wide</a></li><br>
+                        <li class="all-teams"><a href="#">All teams -></a></li>
+                    </ul>
+                </div>
+                <div class="solution-second-part">
+                    <ul class="dropdown">
+                        <li class="grey-heading"><a href="#">USE CASES</a></li><br>
+                        <li><a href="#">Enterprise Project Management</a></li>
+                        <li><a href="#">Agency Project Management</a></li>
+                        <li><a href="#">Agile Project Management</a></li>
+                        <li><a href="#">Project Portfolio Management</a></li>
+                        <li><a href="#">Resource Management</a></li>
+                        <li><a href="#">Working From Anywhere</a></li><br>
+                        <li class="all-teams"><a href="#">All use cases -></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li class="price"><a href="#">Pricing</a></li>
+        </ul>
+        <ul>
+            <li class="resource-menu"><a href="#">Resources &#9662</a>
+                <div class="resource-first-part">
+                    <ul class="dropdown">
+                        <li class="grey-heading"><a href="#">LEARN MORE</a></li><br>
+                        <li><a href="#">COVID-19</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Case studies</a></li>
+                        <li><a href="#">Project Management Guide</a></li><br>
+                    </ul>
+                </div>
+                <div class="resource-third-part">
+                    <ul class="dropdown">
+                        <li class="grey-heading"><a href="#">SUPPORT</a></li><br>
+                        <li><a href="#">Professional Services</a></li>
+                        <li><a href="#">Help Center</a></li><br>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li class="contact"><a href="#">Contact Sales</a></li>
+        </ul>
+        <ul>
+            <li class="language-menu"><a href="#"><i class="fa fa-flag"></i> En</a>
+                <div class="resource-first-part">
+                    <ul class="dropdown">
+                        <li><a href="#">English</a></li><br>
+                        <li><a href="#">Deutsch</a></li><br>
+                        <li><a href="#">Español</a></li><br>
+                        <li><a href="#">Français</a></li><br>
+                        <li><a href="#">Italiano</a></li><br>
+                        <li><a href="#">Nederlands</a></li>
+                        <li><a href="#">Bahasa Indonesia</a></li>
+                    </ul>
+                </div>
+                <div class="resource-third-part">
+                    <ul class="dropdown">
+                        <li><a href="#">Norsk</a></li><br>
+                        <li><a href="#">Polski</a></li>
+                        <li><a href="#">Português (BR)</a></li><br>
+                        <li><a href="#">Svenska</a></li><br>
+                        <li><a href="#">Русский</a></li><br>
+                        <li><a href="#">日本語</a></li><br>
+                        <li><a href="#">한국어</a></li><br>
+                        <li><a href="#">中文(简体)</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li class="login"><a href="#">Login</a></li>
+        </ul>
+        <ul class="startBtn">
+            <button class="start-for-free">Start for free</button>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
