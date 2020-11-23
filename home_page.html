@@ -40,12 +40,13 @@
             font-size: 16px;
             margin-top: -10px;
             margin-left: -40px;
+            color: rgb(24, 31, 56);
         }
         ul li a {
             display: block;
             padding: 10px 20px;
             text-decoration: none;
-            color: black;
+            color: rgb(24, 31, 56);
         }
         .dropdown li:nth-child(1) {
             padding-top: 30px;
@@ -126,7 +127,91 @@
             cursor: pointer;
             transition-delay: 0.1s;
         }
-        
+        #first-section {
+            height: 900px;
+            border: 1px solid black;
+            width: auto;
+            display: grid;
+            grid-template-areas: firstimg midtext secimg;
+            grid-gap: 20px;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+        .first-sec-img1 {
+            height: 450px;
+            margin-left: -140px;
+            margin-top: -150px;
+            grid-area: firstimg;
+        }
+        .first-sec-img2 {
+            height: 450px;
+            width: 450px;
+            margin-left: 900px;
+            margin-top: -170px;
+            grid-area: secimg;
+        }
+        .first-section-text {
+            width: 680px;
+            height: 500px;
+            margin-left: 300px;
+            color: rgb(24, 31, 56);
+            grid-area: midtext;
+            margin-top: -210px;
+            text-align: center;
+        }
+        .first-section-text > h1 {
+            font-size: 55px;
+        }
+        .first-section-text > p {
+            font-size: 22px;
+            text-align: center;
+            padding: 10px 40px;
+        }
+        .first-section-text > input {
+            height: 50px;
+            width: 300px;
+            font-size: 26px;
+            border: 1px solid rgb(101, 118, 148);
+            border-radius: 5px;
+            background-color: rgb(248, 249, 251);
+            margin-top: 30px;
+        }
+        .first-section-text > input:hover {
+            border: 2px solid rgb(101, 118, 148);
+            transition-delay: 0.1s;
+        }
+        ::placeholder {
+            font-size: 18px;
+            padding: 15px 20px;
+            align-items: center;
+            color: rgb(24, 31, 56);
+        }
+        .first-section-text > button {
+            height: 55px;
+            border-radius: 5px;
+            margin-left: 15px;
+            background-color:rgb(8, 207, 101);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            padding: 10px 35px;
+        }
+        .first-section-text > button:hover {
+            background-color: rgb(4, 186, 113);
+        }
+        .our-story {
+            margin-top: 70px;
+            font-size: 21px;
+            color: rgb(4, 69, 77);
+        }
+        .fa {
+            padding-right: 12px;
+        }
+        .our-story:hover {
+            color: #007860;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -233,6 +318,18 @@
             <button class="start-for-free">Start for free</button>
         </ul>
     </nav>
+
+    <div id="first-section">
+        <img src="https://media.istockphoto.com/vectors/woman-with-laptop-sitting-in-nature-and-leaves-concept-illustration-vector-id1139913278?k=6&m=1139913278&s=612x612&w=0&h=vDks140zgZAaCDrxSW0C4IabyHQI7aM8uw0MfM7gMrs=" class="first-sec-img1">
+        <div class="first-section-text">
+            <h1>Power the Modern,<br>Agile Enterprise</h1>
+            <p>Crush your 2020 goals and keep moving forward with <br>Wrike's work management platform.</p>
+            <input type="text" placeholder="Enter your buisness email"><button>Start free trial</button>
+            <div class="our-story"><i style="font-size:24px" class="fa">&#xf01d;</i>Our Story</div>
+        </div>
+        <img src="https://media.istockphoto.com/vectors/freelancer-works-with-laptop-at-home-freelance-concept-illustration-vector-id1137918439?k=6&m=1137918439&s=612x612&w=0&h=jmKYbCrGXHdRSmrmYbwFLeUdAmcdWaph8aY_JhTr3hs=" class="first-sec-img2"/>
+        
+    </div>
 </body>
 </html>
 
