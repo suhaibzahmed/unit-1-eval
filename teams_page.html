@@ -419,6 +419,14 @@
             color: grey;
             text-decoration: none;
         }
+        .error-msg {
+            color: red;
+            margin-top: 10px;
+            margin-left: -25px;
+        }
+        .error-msg2 {
+            margin-left: -400px;
+        }
     </style>
 </head>
 <body>
@@ -528,8 +536,9 @@
         <div class="work-mgt-heading"><h1>Work Management Solutions for Every Team</h1></div>
         <div class="work-mgt-para"><p>Wrike’s versatile and easy-to-use platform adapts to<br> however your team manages their work so they can<br> deliver more.</p></div>
         <div class="work-mgt-entry">
-            <input type="email" placeholder="Business email">
-            <button>Start free trial</button>
+            <input type="email" placeholder="Business email" class="enter-email">
+            <button class="start-trial">Start free trial</button>
+            <p class="error-msg"></p>
         </div>
     </div>
 
@@ -572,8 +581,9 @@
             <h1>Make every project a success</h1>
             <h3>Deliver more of your best work, faster, with Wrike. Start for free today!</h3>
             <div class="start-trial-entry">
-                <input type="email" placeholder="Business email">
-                <button>Start free trial</button>
+                <input type="email" placeholder="Business email" class="enter-email">
+                <button class="start-trial">Start free trial</button>
+                <p class="error-msg2"></p>
             </div>
         </div>
         <div></div>
@@ -650,5 +660,43 @@
             <p style="float: right; padding-top: 10px; padding-right: 30px;">©2006-2020 Wrike, Inc. All rights reserved. Patented. <a href="#">Privacy Policy</a>. <a href="#">Terms of Service</a>.</p>
         </div>
     </footer>
+
+    <script>    
+        var btn = document.getElementsByClassName("start-trial")[0]
+        var btn2 = document.getElementsByClassName("start-trial")[1]
+        var errMsg1 = document.getElementsByClassName("error-msg")[0]
+        var errMsg2 = document.getElementsByClassName("error-msg2")[0]
+        
+        function onPressOne() {
+            var emailBox1 = document.getElementsByClassName("enter-email")[0].value
+            var business1 = document.getElementsByClassName("enter-email")[0]
+            if(emailBox1 == "") {
+                errMsg1.innerHTML = "Please enter the valid email !"   
+                errMsg1.style.color = "red"
+                business1.style.border = 1 + "px solid red"
+            }  
+            else {
+                errMsg1.textContent = "" 
+                business2.style.border = 1 + "px solid rgb(" + 168 + "," + 168 + "," + 168 + ")"
+            }
+        }
+        function onPressTwo() {
+            var emailBox2 = document.getElementsByClassName("enter-email")[1].value
+            var business2 = document.getElementsByClassName("enter-email")[1]
+            if(emailBox2 == "") {
+                errMsg2.innerHTML = "Please enter the valid email !"   
+                errMsg2.style.color = "red"
+                business2.style.border = 1 + "px solid red"
+            }  
+            else {
+                errMsg2.textContent = "" 
+                business2.style.border = 1 + "px solid rgb(" + 168 + "," + 168 + "," + 168 + ")"
+            }
+        }
+        
+        btn.addEventListener("click", onPressOne)
+        btn2.addEventListener("click", onPressTwo)
+
+    </script>
 </body>
 </html>
