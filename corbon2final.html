@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>project 2</title>
+        <style type="text/css">
+            #sales{
+                width:100%;
+                height:40%;
+                background-color:rgb(240 250 240);
+                margin:68px 0px;
+                padding:20px
+            }
+            .saleshead{
+                font-size:52px;
+                padding:1px 400px
+            }
+            .salespara{
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size:22px;
+                color:grey;
+                padding:2px 450px 2px 420px;
+            }
+            #register{
+                width:100%;
+                height:100%;
+            }
+            .registerhead{
+                 padding:1px 375px;
+                 font-size:40px;
+                 font-family: 'Castoro', serif;
+            }
+            .registerpara{
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size:20px;
+                color:grey;
+                padding:0px 200px
+            }
+            .name,.business,.dep,.phone,.job,.buttoninput{
+                width:500px;
+                height:60px;
+                margin:10px 370px;
+                background-color:rgb(250 250 250);
+            }
+            .registerpara2{
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size:14px;
+                color:grey;
+                padding:0px 370px
+            }
+            .error,.error1,.error2,.error3,.error4{
+                color:red;
+                margin-top:15px;
+                margin-left:365px
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="sales">
+                <h1 class="saleshead">Get In Touch With Us</h1>
+                <p class="salespara">Wrike is here to help you at any stage of your project management journey</p>
+            </div>
+            <div id="register">
+                <form id="">
+                    <h1 class="registerhead">Ready to see Wrike for yourself?</h1>
+                    <p class="registerpara">We'd love to show you how Wrike can help your team do more of their best work.Fill out the form and we'll be in touch within 24 hours </p>
+                    <input  class="name" type="text" placeholder="Full Name*" />
+                    <p class="error"></p>
+                    <input class="business" type="text" placeholder="Business email*" class="registerinput"/>
+                    <p class="error1"></p>
+                    <input class="phone" type="text" placeholder="Phone Number*" class="registerinput"/>
+                    <p class="error2"></p>
+                    <p class="registerpara2">what department are you working at now?*</p>
+                    <input class="dep" type="text" placeholder="Select Here*"/>
+                    <p class="error3"></p>
+                    <p class="registerpara2">what is your job level?*</p>
+                    <input class="job" type="text" placeholder="Select Here*"/>
+                    <p class="error4"></p>
+                    <button class="buttoninput" id="bttn"  style="background-color:rgb(70 255 70);color:white;font-size:20px">Get in touch</button>
+                </form>
+            </div>
+        </div>
+    <script type="text/javascript">
+        var para=document.getElementsByClassName('error')[0];
+        var form=document.getElementsByClassName('nameForm')
+        var btn=document.getElementsByClassName('buttoninput')[0];
+        var para1=document.getElementsByClassName('error1')[0];
+        var para2=document.getElementsByClassName('error2')[0];
+        var para3=document.getElementsByClassName('error3')[0];
+        var para4=document.getElementsByClassName('error4')[0];
+            function validate(e){
+                var name=document.getElementsByClassName('name')[0].value;
+                if(name == ''){
+                    e.preventDefault()
+                    para.textContent="first name is empty"
+                }
+                var name1=document.getElementsByClassName('business')[0].value;
+                if(name1 == ''){
+                    e.preventDefault()
+                    para1.textContent="please enter your business email"
+                }
+                var name2=document.getElementsByClassName('phone')[0].value;
+                if(name2 == ''){
+                    e.preventDefault()
+                    para2.textContent="please choose your mobile number"
+                }
+                 var name3=document.getElementsByClassName('dep')[0].value;
+                if(name3 == ''){
+                    e.preventDefault()
+                    para3.textContent="please select your department"
+                }
+                 var name4=document.getElementsByClassName('job')[0].value;
+                if(name4 == ''){
+                    e.preventDefault()
+                    para4.textContent="please select your job level"
+                }
+            }
+            btn.addEventListener('click',validate)
+    </script>
+    </body>
+</html>
