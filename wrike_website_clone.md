@@ -3,7 +3,7 @@ Created a wrike.com clone
 
 # Table of Contents
 * [Intoduction](#introduction)
-* [Different_Pages](#different pages)
+* [Different Pages](#different)
 * [Technologies](#technologies)
 
 ## Introduction
