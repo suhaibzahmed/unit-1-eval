@@ -248,41 +248,41 @@
             color: rgb(140, 240, 155);
             transition-duration: 0.5s;
         }
-        .img1, .img2, .img3, .img4, .img5 {
+        .img1, .img2, .img3, .img4, .img5 {     /* Card imgs before hovering */
             height: 100px;
             width: 100px;
             margin: 20px 30px;
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_company-wide.svg");
         }
-        .cards > div:hover > .img1 {
+        .cards > div:hover > .img1 {    /* Card 1 img after hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_company-wide_inverse.svg");
             transition-duration: 0.5s;
         }
-        .img2 {
+        .img2 {                 /* Card 2 img before hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_marketing.svg");
         }
-        .img3 {
+        .img3 {                 /* Card 3 img before hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_creative.svg");
         }
-        .img4 {
+        .img4 {                 /* Card 4 img before hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_project-management-pmo.svg");
         }
-        .img5 {
+        .img5 {                 /* Card 5 img before hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_professional-services.svg");
         }
-        .cards > div:hover > .img2 {
+        .cards > div:hover > .img2 {        /* Card 2 img after hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_marketing_inverse.svg");
             transition-duration: 0.5s;
         }
-        .cards > div:hover > .img3 {
+        .cards > div:hover > .img3 {        /* Card 3 img after hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_creative_inverse.svg");
             transition-duration: 0.5s;
         }
-        .cards > div:hover > .img4 {
+        .cards > div:hover > .img4 {        /* Card 4 img after hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_project-management-pmo_inverse.svg");
             transition-duration: 0.5s;
         }
-        .cards > div:hover > .img5 {
+        .cards > div:hover > .img5 {        /* Card 5 img after hovering */
             background-image: url("https://www.wrike.com/content/uploads/2020/06/rebrand-icon_teams_professional-services_inverse.svg");
             transition-duration: 0.5s;
         }
@@ -430,6 +430,7 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Bar starting -->
     <nav id="navbar">
         <a href="C:\Users\suhai\Desktop\masai assignments\unit-1 evaluation\unit-1-eval\home_page.html"><img src="https://www.wrike.com/content/themes/wrike/dist/img/raster/wrike-logo.png"/></a>
         <ul>
@@ -531,17 +532,21 @@
             <button class="start-for-free">Start for free</button>
         </ul>
     </nav>
+    <!-- Navigation Bar ending -->
 
+    <!-- Work management part staritng -->
     <div class="work-mgt-part">
         <div class="work-mgt-heading"><h1>Work Management Solutions for Every Team</h1></div>
         <div class="work-mgt-para"><p>Wrike’s versatile and easy-to-use platform adapts to<br> however your team manages their work so they can<br> deliver more.</p></div>
         <div class="work-mgt-entry">
             <input type="email" placeholder="Business email" class="enter-email">
             <button class="start-trial">Start free trial</button>
-            <p class="error-msg"></p>
+            <p class="error-msg"></p>   <!-- para tag to display user input empty. Function written in script-->
         </div>
     </div>
+    <!-- Work management part staritng -->
 
+    <!-- cards part staritng -->
     <div class="cards">
         <div class="card1" style="grid-area: a;">
             <div class="img1"></div>
@@ -574,7 +579,9 @@
             <a href="#">Learn more<i style="font-size:18px; margin-left: 10px;" class="fa">&#xf061;</i></a>
         </div>
     </div>
+    <!-- cards part ending -->
 
+    <!-- start trial box staring -->
     <div class="start-trial-box">
         <div></div>
         <div>
@@ -588,7 +595,9 @@
         </div>
         <div></div>
     </div>
+     <!-- start trial box ending -->
 
+    <!-- footer staring -->
     <footer>
         <div class="product">
             <h2>Product</h2>
@@ -660,27 +669,29 @@
             <p style="float: right; padding-top: 10px; padding-right: 30px; color: white;">©2006-2020 Wrike, Inc. All rights reserved. Patented. <a href="#">Privacy Policy</a>. <a href="#">Terms of Service</a>.</p>
         </div>
     </footer>
+    <!-- footer ending -->
 
+    <!-- script to diplay error msg if user does not enter input -->
     <script>    
         var btn = document.getElementsByClassName("start-trial")[0]
         var btn2 = document.getElementsByClassName("start-trial")[1]
         var errMsg1 = document.getElementsByClassName("error-msg")[0]
         var errMsg2 = document.getElementsByClassName("error-msg2")[0]
         
-        function onPressOne() {
+        function onPressOne() {         //first input box
             var emailBox1 = document.getElementsByClassName("enter-email")[0].value
             var business1 = document.getElementsByClassName("enter-email")[0]
-            if(emailBox1 == "") {
+            if(emailBox1 == "") {       //if user does not enters, display msg and change font color to red and border to red
                 errMsg1.innerHTML = "Please enter the valid email !"   
                 errMsg1.style.color = "red"
                 business1.style.border = 1 + "px solid red"
             }  
-            else {
+            else {              //if user enters, change border to grey
                 errMsg1.textContent = "" 
                 business1.style.border = 1 + "px solid rgb(" + 168 + "," + 168 + "," + 168 + ")"
             }
         }
-        function onPressTwo() {
+        function onPressTwo() {         //second input box
             var emailBox2 = document.getElementsByClassName("enter-email")[1].value
             var business2 = document.getElementsByClassName("enter-email")[1]
             if(emailBox2 == "") {
@@ -689,7 +700,7 @@
                 business2.style.border = 1 + "px solid red"
             }  
             else {
-                errMsg2.textContent = "" 
+                errMsg2.textContent = ""        
                 business2.style.border = 1 + "px solid rgb(" + 168 + "," + 168 + "," + 168 + ")"
             }
         }
