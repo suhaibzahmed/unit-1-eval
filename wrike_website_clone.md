@@ -27,7 +27,7 @@ The Pricing page has different options which allows the user to choose his/her p
 This page is basically for the user to enter his/her details if he/she is interested to have a demo shown to them.
 
 ## Technologies
-This clone was built using technologies like - 
+This clone was built using the following technologies - 
 * HTML
 * CSS
 * Javascript (DOM Events and Attributes)
